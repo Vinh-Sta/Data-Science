@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(5.0, 229.0)" />
+		<node id="1" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(712.0, 308.0)" />
+		<node id="2" name="ARIMA Model" qualified_name="orangecontrib.timeseries.widgets.owarimamodel.OWARIMAModel" project_name="Orange3-Timeseries" version="" title="ARIMA Model" position="(903.0, 464.0)" />
+		<node id="3" name="Line Chart" qualified_name="orangecontrib.timeseries.widgets.owlinechart.OWLineChart" project_name="Orange3-Timeseries" version="" title="Line Chart" position="(260.0, 143.0)" />
+		<node id="4" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(289.0, 628.0)" />
+		<node id="5" name="Model Evaluation" qualified_name="orangecontrib.timeseries.widgets.owmodelevaluation.OWModelEvaluation" project_name="Orange3-Timeseries" version="" title="Model Evaluation" position="(1111.0, 297.0)" />
+		<node id="6" name="Form Timeseries" qualified_name="orangecontrib.timeseries.widgets.owtabletotimeseries.OWTableToTimeseries" project_name="Orange3-Timeseries" version="" title="Form Timeseries" position="(206.0, 358.0)" />
+		<node id="7" name="Interpolate" qualified_name="orangecontrib.timeseries.widgets.owinterpolate.OWInterpolate" project_name="Orange3-Timeseries" version="" title="Interpolate" position="(369.0, 349.0)" />
+		<node id="8" name="VAR Model" qualified_name="orangecontrib.timeseries.widgets.owvarmodel.OWVARModel" project_name="Orange3-Timeseries" version="" title="VAR Model" position="(887.0, 177.0)" />
+		<node id="9" name="Moving Transform" qualified_name="orangecontrib.timeseries.widgets.owmovingtransform.OWMovingTransform" project_name="Orange3-Timeseries" version="" title="Moving Transform" position="(531.0, 328.0)" />
+		<node id="10" name="Difference" qualified_name="orangecontrib.timeseries.widgets.owdifference.OWDifference" project_name="Orange3-Timeseries" version="" title="Difference" position="(668.0, 615.0)" />
+		<node id="11" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (1)" position="(892.0, 623.0)" />
+		<node id="12" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script (2)" position="(940.0, 543.0)" />
+		<node id="13" name="Correlogram" qualified_name="orangecontrib.timeseries.widgets.owcorrelogram.OWCorrelogram" project_name="Orange3-Timeseries" version="" title="Correlogram" position="(782.0, 706.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="1" source_node_id="1" sink_node_id="5" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="2" source_node_id="2" sink_node_id="5" source_channel="Time series model" sink_channel="Time series model" enabled="true" source_channel_id="learner" sink_channel_id="time_series_model" />
+		<link id="3" source_node_id="0" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="4" source_node_id="0" sink_node_id="3" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="5" source_node_id="6" sink_node_id="7" source_channel="Time series" sink_channel="Time series" enabled="true" source_channel_id="time_series" sink_channel_id="time_series" />
+		<link id="6" source_node_id="1" sink_node_id="8" source_channel="Data" sink_channel="Time series" enabled="true" source_channel_id="data" sink_channel_id="time_series" />
+		<link id="7" source_node_id="8" sink_node_id="5" source_channel="Time series model" sink_channel="Time series model" enabled="true" source_channel_id="learner" sink_channel_id="time_series_model" />
+		<link id="8" source_node_id="7" sink_node_id="9" source_channel="Interpolated time series" sink_channel="Time series" enabled="true" source_channel_id="interpolated" sink_channel_id="time_series" />
+		<link id="9" source_node_id="9" sink_node_id="1" source_channel="Time series" sink_channel="Data" enabled="true" source_channel_id="time_series" sink_channel_id="data" />
+		<link id="10" source_node_id="9" sink_node_id="10" source_channel="Time series" sink_channel="Time series" enabled="true" source_channel_id="time_series" sink_channel_id="time_series" />
+		<link id="11" source_node_id="10" sink_node_id="11" source_channel="Time series" sink_channel="Data" enabled="true" source_channel_id="time_series" sink_channel_id="data" />
+		<link id="12" source_node_id="10" sink_node_id="12" source_channel="Time series" sink_channel="Data" enabled="true" source_channel_id="time_series" sink_channel_id="data" />
+		<link id="13" source_node_id="10" sink_node_id="13" source_channel="Time series" sink_channel="Time series" enabled="true" source_channel_id="time_series" sink_channel_id="time_series" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVbAgAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwgQzovVXNlcnMvREVMTC9Eb3dubG9hZHMvTkZMWC5jc3aUjAZwcmVmaXiUTowHcmVscGF0
+aJROjAV0aXRsZZSMAJSMBXNoZWV0lGgOjAtmaWxlX2Zvcm1hdJROdWJoBimBlH2UKGgJjCNDOi9V
+c2Vycy9ERUxML0Rvd25sb2Fkcy9HT09HTEUueGxzeJRoC05oDE5oDWgOaA9oDmgQTnViaAYpgZR9
+lChoCYwyQzovVXNlcnMvREVMTC9Eb3dubG9hZHMvaHJtLWVtcGxveWVlLWF0dHJpdGlvbi50YWKU
+aAtOaAxOaA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMWUM6L1VzZXJzL0RFTEwvQXBwRGF0YS9Mb2Nh
+bC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL3RpdGFu
+aWMudGFilGgLjA9zYW1wbGUtZGF0YXNldHOUaAyMC3RpdGFuaWMudGFilGgNaA5oD2gOaBBOdWJo
+BimBlH2UKGgJjEZDOi9Vc2Vycy9ERUxML09uZURyaXZlL03DoXkgdMOtbmgvTUFDSElORSBMRUFS
+TklOR19WaWV0IE5ndXllbi9jbzIuY3N2lGgLTmgMTmgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjF9D
+Oi9Vc2Vycy9ERUxML0FwcERhdGEvTG9jYWwvUHJvZ3JhbXMvT3JhbmdlL0xpYi9zaXRlLXBhY2th
+Z2VzL09yYW5nZS9kYXRhc2V0cy9oZWFydF9kaXNlYXNlLnRhYpRoC2gaaAyMEWhlYXJ0X2Rpc2Vh
+c2UudGFilGgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjFZDOi9Vc2Vycy9ERUxML0FwcERhdGEvTG9j
+YWwvUHJvZ3JhbXMvT3JhbmdlL0xpYi9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy9pcmlz
+LnRhYpRoC2gaaAyMCGlyaXMudGFilGgNaA5oD2gOaBBOdWJoBimBlH2UKGgJjFlDOi9Vc2Vycy9E
+RUxML0FwcERhdGEvTG9jYWwvUHJvZ3JhbXMvT3JhbmdlL0xpYi9zaXRlLXBhY2thZ2VzL09yYW5n
+ZS9kYXRhc2V0cy9ob3VzaW5nLnRhYpRoC2gaaAyMC2hvdXNpbmcudGFilGgNaA5oD2gOaBBOdWJo
+BimBlH2UKGgJjGBDOi9Vc2Vycy9ERUxML0FwcERhdGEvTG9jYWwvUHJvZ3JhbXMvT3JhbmdlL0xp
+Yi9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy9icm93bi1zZWxlY3RlZC50YWKUaAtoGmgM
+jBJicm93bi1zZWxlY3RlZC50YWKUaA1oDmgPaA5oEE51YmgGKYGUfZQoaAmMVUM6L1VzZXJzL0RF
+TEwvQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3Jhbmdl
+L2RhdGFzZXRzL3pvby50YWKUaAtoGmgMjAd6b28udGFilGgNaA5oD2gOaBBOdWJljAtyZWNlbnRf
+dXJsc5RdlIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsAAwAAAAAAoAAAAJIAAAL5AAAC+wAA
+AKEAAACwAAAC+AAAAvoAAAAAAAAAAAYAAAAAoQAAALAAAAL4AAAC+pSMC3NoZWV0X25hbWVzlH2U
+jAZzb3VyY2WUSwCMA3VybJRoDowNZG9tYWluX2VkaXRvcpR9lIwLX192ZXJzaW9uX1+USwGMEGNv
+bnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGU
+fZQojAZ2YWx1ZXOUfZQojAl2YXJpYWJsZXOUXZRoO32UaEddlChdlCiMBERhdGWUjBRPcmFuZ2Uu
+ZGF0YS52YXJpYWJsZZSMDFRpbWVWYXJpYWJsZZSTlEsCaA6IZV2UKIwET3BlbpRoTYwSQ29udGlu
+dW91c1ZhcmlhYmxllJOUSwBoDohlXZQojARIaWdolGhTSwBoDohlXZQojANMb3eUaFNLAGgOiGVd
+lCiMBUNsb3NllGhTSwBoDohlXZQojAlBZGogQ2xvc2WUaFNLAGgOiGVdlCiMBlZvbHVtZZRoU0sA
+aA6IZWVzaD1LAXWMCmF0dHJpYnV0ZXOUKIwERGF0ZZRLBIaUaFFLAoaUaFVLAoaUaFdLAoaUaFlL
+AoaUaFtLAoaUjAZWb2x1bWWUSwKGlHSUjAVtZXRhc5QpjApjbGFzc192YXJzlCmMEm1vZGlmaWVk
+X3ZhcmlhYmxlc5RdlHViaEIpgZR9lChoRX2UKGhHXZRoO32UaEddlChdlCiMBERhdGWUaE9LAmgO
+iGVdlCiMBE9wZW6UaFNLAGgOiGVdlCiMBEhpZ2iUaFNLAGgOiGVdlCiMA0xvd5RoU0sAaA6IZV2U
+KIwFQ2xvc2WUaFNLAGgOiGVdlCiMBlZvbHVtZZRoU0sAaA6IZV2UKIwJQWRqIENsb3NllGhTSwBo
+DohlZXNoPUsBdWheKIwERGF0ZZRLBIaUjARPcGVulEsChpSMBEhpZ2iUSwKGlIwDTG93lEsChpSM
+BUNsb3NllEsChpSMBlZvbHVtZZRLAoaUdJRoaSloaowJQWRqIENsb3NllEsChpSFlGhrXZR1YmV1
+Lg==
+</properties>
+		<properties node_id="1" format="pickle">gASVSgoAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA0YAAADM
+AAAFnwAAA0IAAANHAAAA6gAABZ4AAANBAAAAAAAAAAAGAAAAA0cAAADqAAAFngAAA0GUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMCUFkaiBDbG9zZZRLAoaUjAlhdmFpbGFibGWUSwCGlIwDTG93lEsC
+hpRoFUsBhpSMBE9wZW6USwKGlGgVSwKGlIwESGlnaJRLAoaUaBVLA4aUjAtIaWdoIChtZWFuKZRL
+AoaUaBVLBIaUjA1Wb2x1bWUgKG1lYW4plEsChpRoFUsFhpSMBlZvbHVtZZRLAoaUaBVLBoaUjARE
+YXRllEsEhpSMCWF0dHJpYnV0ZZRLAIaUjAVDbG9zZZRLAoaUaCtLAYaUjBBBZGogQ2xvc2UgKG1l
+YW4plEsChpSMBWNsYXNzlEsAhpR1Sv7///+GlGgHSwF1jAphdHRyaWJ1dGVzlH2UKGgaSwJoHUsC
+aCBLAmgXSwJoLUsCaBNLAmgwSwJoJksCaCNLAnWMBW1ldGFzlH2UaClLBHN1YmgMKYGUfZQoaA99
+lChoEX2UKGgTSwKGlGgVSwCGlGgpSwSGlGgrSwCGlGgtSwKGlGgrSwGGlIwLSGlnaCAobWVhbimU
+SwKGlGgrSwKGlGgXSwKGlGgrSwOGlGgdSwKGlGgrSwSGlGgmSwKGlGgrSwWGlGgaSwKGlGgrSwaG
+lIwQQWRqIENsb3NlIChtZWFuKZRLAoaUaDJLAIaUdUr+////hpRoB0sBdWg1fZQoaBpLAmgdSwJo
+Q0sCaBdLAmgtSwJoE0sCaE5LAmgmSwJ1aDd9lGgpSwRzdWJoDCmBlH2UKGgPfZQoaBF9lChoE0sC
+hpRoFUsAhpRoKUsEhpRoK0sAhpRoLUsChpRoK0sBhpRoF0sChpRoK0sChpRoHUsChpRoK0sDhpRo
+JksChpRoK0sEhpRoGksChpRoK0sFhpSMEEFkaiBDbG9zZSAobWVhbimUSwKGlGgySwCGlHVK/v//
+/4aUaAdLAXVoNX2UKGgaSwJoHUsCaBdLAmgtSwJoE0sCjBBBZGogQ2xvc2UgKG1lYW4plEsCaCZL
+AnVoN32UaClLBHN1YmgMKYGUfZQoaA99lChoEX2UKGgXSwKGlGgVSwCGlGgdSwKGlGgVSwGGlGgm
+SwKGlGgVSwKGlGgaSwKGlGgVSwOGlGgpSwSGlGgrSwCGlGgtSwKGlGgrSwGGlGgTSwKGlGgySwCG
+lHVK/v///4aUaAdLAXVoNX2UKIwET3BlbpRLAowESGlnaJRLAowDTG93lEsCjAVDbG9zZZRLAowJ
+QWRqIENsb3NllEsCjAZWb2x1bWWUSwJ1aDd9lIwERGF0ZZRLBHN1YmgMKYGUfZQoaA99lChoEX2U
+KGgXSwKGlGgVSwCGlGgtSwKGlGgVSwGGlGgdSwKGlGgVSwKGlGgaSwKGlGgVSwOGlGgmSwKGlGgV
+SwSGlIwLzpRBZGogQ2xvc2WUSwKGlGgVSwWGlGgpSwSGlGgrSwCGlGgTSwKGlGgySwCGlHVK/v//
+/4aUaAdLAXVoNX2UKGgaSwJoHUsCaBdLAmgtSwJoE0sCaCZLAowLzpRBZGogQ2xvc2WUSwJ1aDd9
+lGgpSwRzdWJoDCmBlH2UKGgPfZQoaBF9lChoF0sChpRoFUsAhpRoLUsChpRoFUsBhpRoHUsChpRo
+FUsChpRoGksChpRoFUsDhpRoJksChpRoFUsEhpRoE0sChpRoFUsFhpRoKUsEhpRoK0sAhpSMDVZv
+bHVtZSAobWVhbimUSwKGlGgrSwGGlHVK/v///4aUaAdLAXVoNX2UKGiBSwJogksCaINLAmiESwJo
+hUsCaIZLAowNVm9sdW1lIChtZWFuKZRLAnVoN32UaIhLBHN1YmgMKYGUfZQoaA99lCiMEWRvbWFp
+bl9yb2xlX2hpbnRzlH2UKGiDSwKGlIwJYXZhaWxhYmxllEsAhpRohEsChpRowUsBhpRogksChpRo
+wUsChpRogUsChpRowUsDhpRohksChpRowUsEhpRohUsChpRowUsFhpSMD86UVm9sdW1lIChtZWFu
+KZRLAoaUaMFLBoaUaIhLBIaUjAlhdHRyaWJ1dGWUSwCGlGi5SwKGlIwFY2xhc3OUSwCGlHVK/v//
+/4aUaAdLAXVoNX2UKGiBSwJogksCaINLAmiESwJohUsCaIZLAmi5SwJozUsCdWg3fZRoiEsEc3Vi
+aAwpgZR9lChoD32UKGi+fZQoaINLAoaUaMFLAIaUaIRLAoaUaMFLAYaUaIJLAoaUaMFLAoaUaIFL
+AoaUaMFLA4aUaIVLAoaUaMFLBIaUjAjOlFZvbHVtZZRLAoaUaMFLBYaUaIhLBIaUaNFLAIaUaIZL
+AoaUaNRLAIaUdUr+////hpRoB0sBdWg1fZQojARPcGVulEsCjARIaWdolEsCjANMb3eUSwKMBUNs
+b3NllEsCjAlBZGogQ2xvc2WUSwKMBlZvbHVtZZRLAowIzpRWb2x1bWWUSwJ1aDd9lIwERGF0ZZRL
+BHN1YmgMKYGUfZQoaA99lCiMEWRvbWFpbl9yb2xlX2hpbnRzlH2UKGjySwKGlIwJYXZhaWxhYmxl
+lEsAhpRo80sChpRo/0sBhpRo8UsChpRo/0sChpRo8EsChpRo/0sDhpSMAVSUSwSGlGj/SwSGlGj0
+SwKGlGj/SwWGlGj4SwSGlIwJYXR0cmlidXRllEsAhpSMCM6UVm9sdW1llEsChpRqDQEAAEsBhpRo
+9UsChpSMBWNsYXNzlEsAhpR1Sv7///+GlGgHSwF1aDV9lChqBwEAAEsEjARPcGVulEsCjARIaWdo
+lEsCjANMb3eUSwKMBUNsb3NllEsCjAlBZGogQ2xvc2WUSwKMBlZvbHVtZZRLAowIzpRWb2x1bWWU
+SwJ1aDd9lIwERGF0ZZRLBHN1YmgMKYGUfZQoaA99lCho/H2UKGoZAQAASwKGlGj/SwCGlGoaAQAA
+SwKGlGj/SwGGlGoYAQAASwKGlGj/SwKGlGoXAQAASwKGlGj/SwOGlGocAQAASwKGlGj/SwSGlGoH
+AQAASwSGlGoNAQAASwCGlGofAQAASwSGlGoNAQAASwGGlGobAQAASwKGlGoTAQAASwCGlHVK/v//
+/4aUaAdLAXVoNX2UKGoHAQAASwRqFwEAAEsCahgBAABLAmoZAQAASwJqGgEAAEsCahsBAABLAmoc
+AQAASwJ1aDd9lGofAQAASwRzdWJldS4=
+</properties>
+		<properties node_id="2" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'd': 1, 'forecast_confint': 95, 'forecast_steps': 10, 'learner_name': '', 'p': 4, 'q': 5, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01r\x00\x00\x01\x08\x00\x00\x02U\x00\x00\x02&gt;\x00\x00\x01s\x00\x00\x01&amp;\x00\x00\x02T\x00\x00\x02=\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01s\x00\x00\x01&amp;\x00\x00\x02T\x00\x00\x02=', '__version__': 1}</properties>
+		<properties node_id="3" format="pickle">gASVxwMAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAAAAAAAAAAAAAAABf8AAAMvAAAAAQAAAB4AAAX+AAADLgAAAAAAAAAABgAAAAAB
+AAAAHgAABf4AAAMulIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFu
+Z2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZSMBnZhbHVlc5R9lCiMBWF0dHJzlF2U
+XZSMFE9yYW5nZS5kYXRhLnZhcmlhYmxllIwNbWFrZV92YXJpYWJsZZSTlGgRjBJDb250aW51b3Vz
+VmFyaWFibGWUk5ROjAlBZGogQ2xvc2WUh5RSlH2UKIwFX25hbWWUaBaMDl9jb21wdXRlX3ZhbHVl
+lE6MC3Vua25vd25fc3RylI+UKIwAlE6MAT+UR3/4AAAAAAAAjANuYW6UjAJOQZSMAS6UjAF+lJCM
+D3NvdXJjZV92YXJpYWJsZZROjAZzcGFyc2WUiYwKYXR0cmlidXRlc5R9lIwPX21heF9yb3VuZF9k
+aWZmlEc9cZeZgS3qEYwTX251bWJlcl9vZl9kZWNpbWFsc5RLBowPYWRqdXN0X2RlY2ltYWxzlEsB
+jAtfZm9ybWF0X3N0cpSMAiVnlHViYWGMCGlzX2xvZ2l0lF2UiGGMCXBsb3RfdHlwZZRdlIwEbGlu
+ZZRhaARLAnVzYmgJKYGUfZRoDH2UKIwFYXR0cnOUXZRdlGGMCGlzX2xvZ2l0lF2UiWGMCXBsb3Rf
+dHlwZZRdlIwEbGluZZRhaARLAnVzYmgJKYGUfZRoDH2UKIwFYXR0cnOUXZRdlGgTaBVOjAZWb2x1
+bWWUh5RSlH2UKGgaaENoG05oHI+UKGgeTmgfR3/4AAAAAAAAjANuYW6UjAJOQZRoImgjkGgkTmgl
+iWgmfZRoKEc+sMb3oLXtjWgpSwBoKksBaCuMBCUuMGaUdWJhYYwIaXNfbG9naXSUXZSJYYwJcGxv
+dF90eXBllF2UjARsaW5llGFoBEsCdXNiaAkpgZR9lGgMfZQoaEBdlF2UYWhMXZSJYWhOXZRoUGFo
+BEsCdXNiaAkpgZR9lGgMfZQoaEBdlF2UaBNoFU6MCM6UVm9sdW1llIeUUpR9lChoGmhdaBtOaBxo
+R2gkTmgliWgmfZRoKEc+sMb3oLXtjWgpSwBoKksAaCuMBCUuMGaUdWJhYWhMXZSJYWhOXZRoUGFo
+BEsCdXNiZXUu
+</properties>
+		<properties node_id="4" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x01\x00\x00\x00\xeb\x00\x00\x06\x00\x00\x00\x02c\x00\x00\x00\x02\x00\x00\x01\t\x00\x00\x05\xff\x00\x00\x02b\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x02\x00\x00\x01\t\x00\x00\x05\xff\x00\x00\x02b', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': "from Orange.data.pandas_compat import table_to_frame\nimport matplotlib.pyplot as plt\nfrom statsmodels.graphics.tsaplots import plot_acf, plot_pacf\nimport pandas as pd\ndf = table_to_frame(in_data)\nfig, ax = plt.subplots(2, 1, figsize=(10,6))\nplot_acf(df['ΔVolume (mean)'].dropna(), ax=ax[0], lags=20)\nplot_pacf(df['ΔVolume (mean)'].dropna(), ax=ax[1], lags=20)\nplt.tight_layout()\nplt.show()\n", 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x012\x00\x00\x00\x00\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="5" format="literal">{'autocommit': False, 'controlAreaVisible': True, 'forecast_steps': 10, 'n_folds': 11, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\x91\x00\x00\x01u\x00\x00\x05\x9e\x00\x00\x03\xa3\xff\xff\xff\x98\x00\x00\x01\x93\x00\x00\x05\x97\x00\x00\x03\x9c\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\xff\xff\xff\x98\x00\x00\x01\x93\x00\x00\x05\x97\x00\x00\x03\x9c', '__version__': 1}</properties>
+		<properties node_id="6" format="literal">{'attribute': 'Date', 'autocommit': True, 'controlAreaVisible': True, 'implied_sequence': 0, 'include_extra_part': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\x06\x00\x00\x00\xf1\x00\x00\x03\x1e\x00\x00\x02"\x00\x00\x02\x07\x00\x00\x01\x0f\x00\x00\x03\x1d\x00\x00\x02!\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02\x07\x00\x00\x01\x0f\x00\x00\x03\x1d\x00\x00\x02!', 'start_date': (2000, 1, 1), 'start_time': (0, 0, 0), 'steps': 1, 'unit': 'Days', '__version__': 1}</properties>
+		<properties node_id="7" format="literal">{'autoapply': True, 'controlAreaVisible': True, 'interpolation': 0, 'multivariate': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\xa0\x00\x00\x018\x00\x00\x03`\x00\x00\x01\xda\x00\x00\x02\xa1\x00\x00\x01V\x00\x00\x03_\x00\x00\x01\xd9\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02\xa1\x00\x00\x01V\x00\x00\x03_\x00\x00\x01\xd9', '__version__': 2}</properties>
+		<properties node_id="8" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'forecast_confint': 95, 'forecast_steps': 10, 'ic': 0, 'learner_name': '', 'maxlags': 5, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03_\x00\x00\x00\xb5\x00\x00\x04T\x00\x00\x03\x1d\x00\x00\x03`\x00\x00\x00\xd3\x00\x00\x04S\x00\x00\x03\x1c\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x03`\x00\x00\x00\xd3\x00\x00\x04S\x00\x00\x03\x1c', 'trend': 0, '__version__': 1}</properties>
+		<properties node_id="9" format="pickle">gASVagEAAAAAAAB9lCiMCmF1dG9jb21taXSUiIwLYmxvY2tfd2lkdGiUSwWMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjA5rZWVwX2luc3RhbmNlc5RLAYwGbWV0aG9klEsAjBJtaWdyYXRlZF9hZ2dyZWdh
+dGWUiYwMcGVyaW9kX3dpZHRolIwFWWVhcnOUjAxyZWZfaW5zdGFuY2WUSwCME3NhdmVkV2lkZ2V0
+R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAHUAAAD7AAACzgAAAwoAAAB2AAABGQAAAs0AAAMJAAAAAAAA
+AAAGAAAAAHYAAAEZAAACzQAAAwmUjAl1c2VfbmFtZXOUiIwJdmFyX2hpbnRzlH2UKIwJQWRqIENs
+b3NllIiGlI+UKIwEbWVhbpSQjARIaWdolIiGlI+UKGgSkIwGVm9sdW1llIiGlI+UKGgSkHWMDHdp
+bmRvd193aWR0aJRLD4wLX192ZXJzaW9uX1+USwF1Lg==
+</properties>
+		<properties node_id="10" format="literal">{'assume_zero_before': False, 'autocommit': True, 'controlAreaVisible': True, 'invert_direction': False, 'operation': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x010\x00\x00\x00\xb0\x00\x00\x02=\x00\x00\x02\xae\x00\x00\x011\x00\x00\x00\xce\x00\x00\x02&lt;\x00\x00\x02\xad\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x011\x00\x00\x00\xce\x00\x00\x02&lt;\x00\x00\x02\xad', 'selection': ['Adj Close (mean)'], 'shift_period': 1, '__version__': 1}</properties>
+		<properties node_id="11" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf9\x00\x00\x06\x00\x00\x00\x030\x00\x00\x01B\x00\x00\x01\n\x00\x00\x04a\x00\x00\x02\xe7\x00\x00\x00\x00\x02\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03/', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': 'from Orange.data.pandas_compat import table_to_frame\nfrom statsmodels.tsa.stattools import adfuller\nimport pandas as pd\n\ndf = table_to_frame(in_data)\n\n# ADF test on raw data\nadf_result = adfuller(df[\'ΔAdj Close (mean)\'].dropna())\nprint(f"ADF Statistic: {adf_result[0]}")\nprint(f"p-value: {adf_result[1]}")\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x02\x1f\x00\x00\x00\xd2\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="12" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf9\x00\x00\x06\x00\x00\x00\x030\x00\x00\x01B\x00\x00\x01\n\x00\x00\x04a\x00\x00\x02\xe7\x00\x00\x00\x00\x02\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03/', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\narr = np.array([\n  [25, 186, 0],\n  [30, 164, 1]])\nout_data = Table.from_numpy(domain, arr)\n', 'filename': None}], 'scriptText': 'import matplotlib.pyplot as plt\nfrom statsmodels.tsa.arima.model import ARIMA\nimport pandas as pd\nimport numpy as np\nfrom Orange.data.pandas_compat import table_to_frame\n\n# Convert Orange Timeseries data to a pandas DataFrame\ndf = table_to_frame(in_data)\n\n# Drop NaN values from the differenced series\ndf.dropna(subset=[\'ΔAdj Close (mean)\'], inplace=True)\n\n# Define the differenced series for ARIMA fitting\ny = df[\'ΔAdj Close (mean)\']\n\n# Function to find the best p, q using AIC\ndef find_best_arima_order(y, p_range, q_range):\n    best_aic = np.inf\n    best_order = None\n    aic_values = []\n\n    # Try different combinations of p and q\n    for p in p_range:\n        for q in q_range:\n            try:\n                # Fit ARIMA model\n                model = ARIMA(y, order=(p, 0, q))  # d=0 as the series is already differenced\n                results = model.fit()\n                aic_values.append((p, q, results.aic))\n                if results.aic &lt; best_aic:\n                    best_aic = results.aic\n                    best_order = (p, q)\n            except:\n                continue\n\n    # Sort AIC values for visualization\n    aic_values.sort(key=lambda x: x[2])\n\n    return best_order, aic_values\n\n# Specify the range of p and q values to test\np_range = range(0, 6)  # You can adjust the range based on your data\nq_range = range(0, 6)\n\n# Find the best order (p, q) using AIC\nbest_order, aic_values = find_best_arima_order(y, p_range, q_range)\n\n# Display the best order (p, q) and AIC values\nprint(f"Best order (p, q): {best_order}")\nprint("AIC values for different (p, q) combinations:")\nfor order in aic_values:\n    print(f"p={order[0]}, q={order[1]}, AIC={order[2]}")\n\n# Plot AIC values for different (p, q) combinations\np_vals = [x[0] for x in aic_values]\nq_vals = [x[1] for x in aic_values]\naic_vals = [x[2] for x in aic_values]\n\nfig = plt.figure(figsize=(10, 6))\nsc = plt.scatter(p_vals, q_vals, c=aic_vals, cmap=\'viridis\')\nplt.colorbar(sc, label=\'AIC\')\nplt.xlabel(\'p\')\nplt.ylabel(\'q\')\nplt.title(\'AIC values for different ARIMA(p, q) combinations\')\nplt.show()', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8f\x00\x00\x02b\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="13" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x9b\x00\x00\x00\xaf\x00\x00\x03\xdc\x00\x00\x02\xc1\x00\x00\x00\x9c\x00\x00\x00\xcd\x00\x00\x03\xdb\x00\x00\x02\xc0\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x9c\x00\x00\x00\xcd\x00\x00\x03\xdb\x00\x00\x02\xc0', 'selection': ['ΔAdj Close (mean)'], 'use_confint': True, 'use_pacf': True, '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
