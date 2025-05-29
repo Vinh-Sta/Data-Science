@@ -112,60 +112,60 @@ Exhaustive Parameter Search for ARIMA (Python Script)
 To identify the best combination of ARIMA parameters (p, q) based on the Akaike Information Criterion (AIC):
 
 This is python code: 
+```bash
+import matplotlib.pyplot as plt  
 
-import matplotlib.pyplot as plt
+from statsmodels.tsa.arima.model import ARIMA  
 
-from statsmodels.tsa.arima.model import ARIMA
+import pandas as pd  
 
-import pandas as pd
+import numpy as np  
 
-import numpy as np
+from Orange.data.pandas_compat import table_to_frame    
 
-from Orange.data.pandas_compat import table_to_frame
+df = table_to_frame(in_data) # Convert Orange Timeseries data to pandas DataFrame  
+df.dropna(subset=['ΔAdj Close (mean)'], inplace=True)  
+y = df['ΔAdj Close (mean)']  
+def find_best_arima_order(y, p_range, q_range):  
+    best_aic = np.inf  
+    best_order = None  
+    aic_values = []  
 
-df = table_to_frame(in_data) # Convert Orange Timeseries data to pandas DataFrame
-df.dropna(subset=['ΔAdj Close (mean)'], inplace=True)
-y = df['ΔAdj Close (mean)']
-def find_best_arima_order(y, p_range, q_range):
-    best_aic = np.inf
-    best_order = None
-    aic_values = []
+    for p in p_range:  
+        for q in q_range:  
+            try:  
+                model = ARIMA(y, order=(p, 0, q))    # Series is already differenced
+                results = model.fit()  
+                aic_values.append((p, q, results.aic))  
+                if results.aic < best_aic:  
+                    best_aic = results.aic  
+                    best_order = (p, q)  
+            except:  
+                continue  
 
-    for p in p_range:
-        for q in q_range:
-            try:
-                model = ARIMA(y, order=(p, 0, q))  # Series is already differenced
-                results = model.fit()
-                aic_values.append((p, q, results.aic))
-                if results.aic < best_aic:
-                    best_aic = results.aic
-                    best_order = (p, q)
-            except:
-                continue
-
-    aic_values.sort(key=lambda x: x[2])
-    return best_order, aic_values
+    aic_values.sort(key=lambda x: x[2])  
+    return best_order, aic_values  
 p_range = range(0, 6)  
-q_range = range(0, 6)
-best_order, aic_values = find_best_arima_order(y, p_range, q_range)
-print(f"Best order (p, q): {best_order}")# Display and plot results
-for order in aic_values:
-    print(f"p={order[0]}, q={order[1]}, AIC={order[2]}")
-p_vals = [x[0] for x in aic_values]
-q_vals = [x[1] for x in aic_values]
-aic_vals = [x[2] for x in aic_values]
-plt.figure(figsize=(10, 6))
-sc = plt.scatter(p_vals, q_vals, c=aic_vals, cmap='viridis')
-plt.colorbar(sc, label='AIC')
-plt.xlabel('p')
-plt.ylabel('q')
-plt.title('AIC values for ARIMA(p, q) combinations')
-plt.show()
-
+q_range = range(0, 6)  
+best_order, aic_values = find_best_arima_order(y, p_range, q_range)  
+print(f"Best order (p, q): {best_order}")# Display and plot results  
+for order in aic_values:  
+    print(f"p={order[0]},q={order[1]}, AIC={order[2]}")  
+p_vals = [x[0] for x in aic_values]  
+q_vals = [x[1] for x in aic_values]  
+aic_vals = [x[2] for x in aic_values]  
+plt.figure(figsize=(10, 6))  
+sc = plt.scatter(p_vals, q_vals, c=aic_vals, cmap='viridis')  
+plt.colorbar(sc, label='AIC')  
+plt.xlabel('p')  
+plt.ylabel('q')  
+plt.title('AIC values for ARIMA(p, q) combinations')  
+plt.show()  
+```
 ![image](https://github.com/user-attachments/assets/30294912-462d-4264-a083-f6105f972722)
 
 
-Selected ARIMA Model: Based on AIC results, the optimal configuration was ARIMA(4, 1, 5).
+Selected ARIMA Model: Based on AIC results, the optimal configuration was ARIMA(4, 1, 5).  
 
 VI. Final Comparison
 The performance of ARIMA(4,1,5) and VAR models was evaluated using the Prediction widget in Orange. Detailed results, plots, and analysis are available in the accompanying slide deck:
