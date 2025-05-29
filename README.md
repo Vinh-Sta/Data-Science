@@ -114,10 +114,15 @@ To identify the best combination of ARIMA parameters (p, q) based on the Akaike 
 This is python code: 
 
 import matplotlib.pyplot as plt
+
 from statsmodels.tsa.arima.model import ARIMA
+
 import pandas as pd
+
 import numpy as np
+
 from Orange.data.pandas_compat import table_to_frame
+
 df = table_to_frame(in_data) # Convert Orange Timeseries data to pandas DataFrame
 df.dropna(subset=['ΔAdj Close (mean)'], inplace=True)
 y = df['ΔAdj Close (mean)']
@@ -140,7 +145,7 @@ def find_best_arima_order(y, p_range, q_range):
 
     aic_values.sort(key=lambda x: x[2])
     return best_order, aic_values
-p_range = range(0, 6)
+p_range = range(0, 6)  
 q_range = range(0, 6)
 best_order, aic_values = find_best_arima_order(y, p_range, q_range)
 print(f"Best order (p, q): {best_order}")# Display and plot results
@@ -156,6 +161,9 @@ plt.xlabel('p')
 plt.ylabel('q')
 plt.title('AIC values for ARIMA(p, q) combinations')
 plt.show()
+
+![image](https://github.com/user-attachments/assets/30294912-462d-4264-a083-f6105f972722)
+
 
 Selected ARIMA Model: Based on AIC results, the optimal configuration was ARIMA(4, 1, 5).
 
